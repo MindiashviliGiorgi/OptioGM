@@ -1,0 +1,12 @@
+form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+}

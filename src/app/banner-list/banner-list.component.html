@@ -1,1 +1,68 @@
-<p>banner-list works!</p>
+<div class="banners-list-main">
+    <div class="btns">
+      <button (click)="openDrawer = true;">Drawer Open</button>
+      <button (click)="openDrawer = false">Drawer Close</button>
+    </div>
+    <div class="banner-container fade" *ngIf="container === 1">
+      <div class="image">
+        <img src="/assets/images/back.jpeg">
+      </div>
+      <div class="information">
+        <div class="left">
+          <div class="title">
+            <h1>Name : Naruto</h1>
+          </div>
+          <div class="channel">
+            <h3>Channel ID : channelId</h3>
+          </div>
+          <div class="zone">
+            <h3>Zone : Slider Main Hero</h3>
+          </div>
+          <div class="start-date">
+            <h3>Start Date : 200,08</h3>
+          </div>
+          <div class="start-date">
+            <h3>End Date : 21200,08</h3>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="banner-container fade" *ngIf="container === 2">
+      <div class="image">
+        <img src="/assets/images/back2.jpeg">
+      </div>
+      <div class="information">
+        <div class="left">
+          <div class="title">
+            <h1>Name : Naruto</h1>
+          </div>
+          <div class="channel">
+            <h3>Channel ID : channelId</h3>
+          </div>
+          <div class="zone">
+            <h3>Zone : Slider Main Hero</h3>
+          </div>
+          <div class="start-date">
+            <h3>Start Date : 200,08</h3>
+          </div>
+          <div class="start-date">
+            <h3>End Date : 21200,08</h3>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="containers-btns-dots">
+      <button (click)="previousContainer()">Previous</button>
+      <div class="dot fade" (click)="container = 1" [class.dot_active]="container === 1"></div>
+      <div class="dot fade" (click)="container = 2" [class.dot_active]="container === 2"></div>
+      <button (click)="nextContainer()">Next</button>
+    </div>
+</div>
+<div class="aside-main" [class.drawer_move]="openDrawer">
+  <div class="aside-container">
+    <app-banner-form></app-banner-form>
+  </div>
+</div>
+

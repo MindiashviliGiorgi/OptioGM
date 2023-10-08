@@ -1,0 +1,53 @@
+<form (ngSubmit)="submitForm()">
+  <!-- Banner Name -->
+  <div class="form-box">
+    <label for="name">Banner Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <!-- channel ID -->
+  <div class="form-box">
+    <label for="channelId">Channel ID</label>
+    <input type="text" id="channelId" name="channelId" required>
+  </div>
+  <!-- Banner Language -->
+  <div class="form-box">
+    <label for="language">language</label>
+    <input type="text" id="language" name="language" required>
+  </div>
+  <!-- zone ID -->
+  <div class="form-box">
+    <label for="zoneId">Zone ID</label>
+    <input type="text" id="zoneId" name="zoneId" required>
+  </div>
+  <!-- Priority -->
+  <div class="form-box">
+    <label for="priority">Priority</label>
+    <input type="number" id="priority" name="priority" required>
+  </div>
+  <!-- File ID -->
+  <div class="form-box">
+    <label for="fileId">Upload Image</label>
+    <input type="file" name="fileId" id="fileId" accept="image/*" required>
+  </div>
+  <!-- URL -->
+  <div class="form-box">
+    <label for="url">URL</label>
+    <input type="text" id="url" name="url" required>
+  </div>
+  <!-- Start Date -->
+  <div class="form-box">
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" name="startDate" required>
+  </div>
+  <!-- End Date -->
+  <div class="form-box">
+    <label for="startDate">End Date</label>
+    <input type="date" id="endDate" name="endDate" required>
+  </div>
+  <!-- isCorporate -->
+  <div class="form-box">
+    <label for="isCorporate">isCorporate</label>
+    <input type="radio" id="isCorporate" name="isCorporate" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>
