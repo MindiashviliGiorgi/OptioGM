@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./banner-list.component.scss']
 })
 export class BannerListComponent {
-  openDrawer : boolean = true;
+  openDrawer : boolean = false;
   container : number = 1;
 
   constructor(private bannerService: BannerService, private http : HttpClient) {}
@@ -29,23 +29,53 @@ export class BannerListComponent {
     }
   }
 
+  banners : any [] = [];
+
+  // getBanners() {
+  //   const query = {
+  //     includes: ['Giorgi', 'internet-bank', 'exapmle'],
+  //     search: 'optio',
+  //     pageSize: 10,
+  //     pageIndex: 0,
+  //   };
+  //   this.bannerService.getBanners(query)
+  //   .subscribe(
+  //     (response) => {
+  //       if (response && response.data && response.data.entities) {
+  //         const entities = response.data.entities;
+  //         this.banners = entities;
+  //         console.log('Banners:', this.banners);
+  //         console.log(response)
+  //       }
+  //     },
+  //     (error) => {
+  //       console.error('Error:', error);
+  //     }
+  //   );
+
+  // }
   getBanners() {
-    const query = {
-      includes: ['name', 'channelId', 'id'],
-      search: 'optio',
-      pageSize: 10,
-      pageIndex: 0,
-    };
-
-    this.bannerService.getBanners(query).subscribe(
-      (response) => {
-        console.log('Banners:', response);
-      },
-      (error) => {
-        console.error('Error:', error);
-      }
-    );
-
+    setTimeout(() => {
+      const query = {
+        includes: ['Giorgi', 'internet-bank', 'exapmle'],
+        search: 'optio',
+        pageSize: 10,
+        pageIndex: 0,
+      };
+      this.bannerService.getBanners(query).subscribe(
+        (response) => {
+          if (response && response.data && response.data.entities) {
+            const entities = response.data.entities;
+            this.banners = entities;
+            console.log('Banners:', this.banners);
+            console.log(response);
+          }
+        },
+        (error) => {
+          console.error('Error:', error);
+        }
+      );
+    }, 4000); // 1000 milliseconds (1 second) delay
   }
 
 }

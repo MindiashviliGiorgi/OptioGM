@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BannerListComponent } from './banner-list/banner-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BannerFormComponent } from './banner-form/banner-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BannerFormComponent } from './banner-form/banner-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

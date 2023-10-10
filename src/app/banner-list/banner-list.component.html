@@ -2,6 +2,11 @@
     <div class="btns">
       <button (click)="openDrawer = true;">Drawer Open</button>
       <button (click)="openDrawer = false">Drawer Close</button>
+      <div style="position: relative; z-index: 99;">
+        <ul *ngFor="let banner of banners">
+          <li>ID : {{ banner.id }}</li>
+        </ul>
+      </div>
     </div>
     <div class="banner-container fade" *ngIf="container === 1">
       <div class="image">
@@ -65,4 +70,5 @@
     <app-banner-form></app-banner-form>
   </div>
 </div>
+
 
